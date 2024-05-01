@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderForm matches snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="w-ful min-h-[600px] space-y-8"
+  >
+    <div
+      class="space-y-2"
+    >
+      <label
+        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for="orderNumber"
+      >
+        Number
+      </label>
+      <input
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        id="orderNumber"
+        name="orderNumber"
+        type="text"
+      />
+    </div>
+    <div
+      class="flex w-full flex-col overflow-hidden bg-popover text-popover-foreground h-40 rounded-lg border shadow-md"
+      cmdk-root=""
+      tabindex="-1"
+    >
+      <label
+        cmdk-label=""
+        for=":r2:"
+        id=":r1:"
+        style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
+      />
+      <div
+        class="flex items-center border-b px-3"
+        cmdk-input-wrapper=""
+      >
+        <svg
+          class="lucide lucide-search mr-2 h-4 w-4 shrink-0 opacity-50"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <path
+            d="m21 21-4.3-4.3"
+          />
+        </svg>
+        <input
+          aria-autocomplete="list"
+          aria-controls=":r0:"
+          aria-expanded="true"
+          aria-labelledby=":r1:"
+          autocomplete="off"
+          autocorrect="off"
+          class="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+          cmdk-input=""
+          id=":r2:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        aria-label="Suggestions"
+        class="max-h-[300px] overflow-y-auto overflow-x-hidden"
+        cmdk-list=""
+        id=":r0:"
+        role="listbox"
+      >
+        <div
+          cmdk-list-sizer=""
+        >
+          <div
+            class="overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground"
+            cmdk-group=""
+            data-value="Select your Products"
+            role="presentation"
+          >
+            <div
+              aria-hidden="true"
+              cmdk-group-heading=""
+              id=":r4:"
+            >
+              Select your Products
+            </div>
+            <div
+              aria-labelledby=":r4:"
+              cmdk-group-items=""
+              role="group"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-ful my-2"
+    >
+      <div
+        class="rounded-md border"
+      >
+        <div
+          class="relative w-full overflow-auto"
+        >
+          <table
+            class="w-full caption-bottom text-sm"
+          >
+            <thead
+              class="[&_tr]:border-b"
+            >
+              <tr
+                class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+              >
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+                >
+                  <button
+                    aria-checked="false"
+                    aria-label="Select all"
+                    class="peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                    data-state="unchecked"
+                    role="checkbox"
+                    type="button"
+                    value="on"
+                  />
+                  <input
+                    aria-hidden="true"
+                    style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px; width: 0px; height: 0px;"
+                    tabindex="-1"
+                    type="checkbox"
+                    value="on"
+                  />
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+                >
+                  SKU
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+                >
+                  Name
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="[&_tr:last-child]:border-0"
+            />
+          </table>
+        </div>
+      </div>
+    </div>
+    <input
+      name="products"
+      type="hidden"
+      value="[]"
+    />
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+      type="submit"
+    >
+      Save 
+    </button>
+  </form>
+</DocumentFragment>
+`;

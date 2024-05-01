@@ -1,36 +1,56 @@
+# Packiyo Challenge
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+## Local dev environment
+Set the following variables in a .env file (like .env.example):
+```
+NEXT_PUBLIC_BACKEND_URL=https://staging1.internal1.packiyo.com/api/v1
+TOKEN_HARDCODE=Mytoken // shared by email
+```
+
+```bash
+npm install
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Decisions made
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### React Ecosystem
+Nextjs allows us to render components directly from the server, but also components from the client. This gave me flexibility when choosing which should be server components or client components. It also allows me to make all requests directly from the server.
 
-## Learn More
+### UI components
+I used the library https://ui.shadcn.com, easy to integrate with nextjs and very light, since is NOT a component library. It's a collection of re-usable components that you can copy and paste into apps. 
+It also has strong support from the community, being TOP 1 today(ref: https://risingstars.js.org/2023/en#section-react). And excellent compatibility with tailwind.
 
-To learn more about Next.js, take a look at the following resources:
+### Handle Errors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is the type for all errors:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+src/lib/type.ts
 
-## Deploy on Vercel
+```bash
+export interface ServerError {
+  detail: string;
+  source?: {
+    pointer: string;
+  };
+  status: number;
+  title: string;
+}
+```
+All errors that are not validations will be with this structure.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+and here src/hooks/useToast.ts we have a hook that is responsible for mapping all the errors and shows a toast for each error
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Run tests
+```bash
+npm test
+```
